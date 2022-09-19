@@ -11,7 +11,7 @@ $tour_photo = $_FILES['tour_photo']["name"];
 
 
 $path = 'uploads/' . time() . $_FILES['tour_photo']["name"];
-move_uploaded_file($_FILES['tour_photo']['tmp_name'], '../' . $path);
+move_uploaded_file($_FILES['tour_photo']['tmp_name'], $path);
 mysqli_query($link, "INSERT INTO `tours` (`id_tour`, `tour_name`, `tour_date`, `tour_count`, `tour_photo`) VALUES (NULL, '$tour_name', '$tour_date', '$tour_count', '$path')");
 header('Location: /indexTicket.php');
 

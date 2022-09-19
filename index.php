@@ -32,21 +32,20 @@ require __DIR__ . "/header.php";
                         $user_name = $_SESSION['user']['login'];
                         if ($_SESSION['user']['id'] != NULL) {
                             if ($tour_count > 0) {
-                                echo " <form action='/vendor/TakeTour.php' method='GET' class='tours-card'>";
+                                echo " <form action='/vendor/TakeTicket.php' method='GET' class='card'>";
                                 echo "<img src='$image'>";
                                 echo "<div class='zoo-card'>";
                                     echo " <h3>$tour_name</h3>";
                                     echo " <input hidden name='id_tour' value='$id_tour'>";
-                                    echo " <input hidden name='id_client' value='$user'>";
-                                    echo " <input hidden name='user_name' value='$user_name'>";
                                     echo " <input hidden name='tour_name' value='$tour_name'>";
+                                    echo " <input hidden name='tour_count' value='$tour_count'>";
                                     echo " <span class='card__count'>$tour_date</span>";
                                     echo " <span class='card__count'>Свободно :  $tour_count  мест</span>";
                                     echo "<button type='submit' class='third cars-btn'>Заказать</button>";
                                 echo "</div>";
                                 echo "</form>";
                             } else {
-                                echo " <form action='/vendor/TakeTour.php' method='GET' class='$tour_card_disabled'>";
+                                echo " <form action='/vendor/TakeTicket.php' method='GET' class='card $tour_card_disabled'>";
                                 echo "<img src='$image'>";
                                 echo "<div class='zoo-card'>";
                                 echo " <h3>$tour_name</h3>";
@@ -57,7 +56,7 @@ require __DIR__ . "/header.php";
                                 echo "</form>";
                             }
                         } else {
-                            echo " <form action='/vendor/TakeTour.php' method='GET' class='tours-card'>";
+                            echo " <form action='/vendor/TakeTicket.php' method='GET' class='card'>";
                             echo "<img src='$image'>";
                             echo "<div class='zoo-card'>";
                             echo " <h3>$tour_name</h3>";

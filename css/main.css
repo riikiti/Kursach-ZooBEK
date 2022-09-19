@@ -266,3 +266,9 @@ footer li span:hover {
 .card-disabled{
     border: 2px dotted red;
 }
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: grey;
+}

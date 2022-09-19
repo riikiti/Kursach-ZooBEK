@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 18 2022 г., 14:56
+-- Время создания: Сен 19 2022 г., 21:48
 -- Версия сервера: 8.0.24
 -- Версия PHP: 7.1.33
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- База данных: `courseworkweb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `tours`
+--
+
+CREATE TABLE `tours` (
+  `id_tour` int NOT NULL,
+  `tour_name` varchar(300) DEFAULT NULL,
+  `tour_date` datetime DEFAULT NULL,
+  `tour_count` int DEFAULT NULL,
+  `tour_photo` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `tours`
+--
+
+INSERT INTO `tours` (`id_tour`, `tour_name`, `tour_date`, `tour_count`, `tour_photo`) VALUES
+(10, 'Геленджик', '2011-11-11 00:00:00', 0, 'uploads/1642887277Gelendzhik-1.jpg'),
+(11, 'Сочи', '2011-11-11 00:00:00', 15, 'uploads/1642887291Sochi.jpg'),
+(12, 'Анапа', '2011-11-12 00:00:00', 10, 'uploads/1642928948Anapa_2018_d_850.jpg');
 
 -- --------------------------------------------------------
 
@@ -48,6 +71,12 @@ INSERT INTO `users` (`id`, `login`, `email`, `name`, `password`) VALUES
 --
 
 --
+-- Индексы таблицы `tours`
+--
+ALTER TABLE `tours`
+  ADD PRIMARY KEY (`id_tour`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -56,6 +85,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `tours`
+--
+ALTER TABLE `tours`
+  MODIFY `id_tour` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

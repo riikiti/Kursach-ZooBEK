@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    padding: 1% 5%;
+}
+
+.header-logo {
+    width: 15%;
+}
+
+.header-logo img {
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid red;;
+}
+
+.header-logo img:hover {
+    animation: rot 1s ease-in-out;
+}
+
+@keyframes rot {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.zoo-name {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    color: white;
+    font-size: 44px;
+    font-family: 'Gluten', cursive;
+    letter-spacing: 0.4em;
+    padding: 2% 12% 0;
+}
+
+.zoo-name div:last-child {
+    margin-left: auto;
+}
+
+.header-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22%;
+}
+
+.header-action > ul {
+    margin-top: 15%;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    list-style-type: none !important;
+}
+
+.header-action > ul > li > a, nav > a {
+    color: white;
+}
+
+.header-action > ul > li > a:hover, nav > a:hover {
+    color: grey;
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    list-style-type: none !important;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 4% 0;
+}
+
+.map {
+    width: 92%;
+    border: 3px solid black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+}
+
+button {
+    margin: 20px 0;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+svg:hover {
+    color: red !important;
+}
+
+.about {
+    white-space: pre-line;
+    font-size: 20px;
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    flex-shrink: 0;
+    background-color: #000;
+    padding: 2% 12%;
+}
+
+footer li {
+    color: #b80707;
+    font-size: 111%;
+    padding-bottom: 4%;
+}
+
+footer li span {
+    color: #fff;
+}
+
+footer li span:hover {
+    color: grey;
+}
+
+.footer-logo {
+    width: 18%;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 38%;
+    border-radius: 50%;
+    border: 3px solid red;;
+}
+
+.footer-logo > .copyright {
+    color: #fff;
+    font-size: 111%;
+}
+
+.footer-links {
+    margin-left: 16%;
+    width: 10%;
+}
+
+.footer-links > div {
+    padding-bottom: 1%;
+    color: #fff;
+    text-align: center;
+    font-size: 141%;
+    font-weight: bold;
+    border-bottom: 2px ridge #808080;
+}
+
+.footer-links > ul {
+    padding-left: 16%;
+    padding-top: 6px;
+}
+
+.zoo-wrap {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 50px 0;
+}
+
+.zoo-content {
+    width: 80%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.zoo-card {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid gold;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.zoo-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+
+.zoo-card h3 {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.zoo-card p {
+    opacity: 0;
+    font-size: 30px;
+    transition: 1s ease-in-out;
+}
+
+.zoo-card:hover h3 {
+    opacity: 1;
+    color: black;
+}
+
+.zoo-card:hover p {
+    opacity: 1;
+    color: black;
+}

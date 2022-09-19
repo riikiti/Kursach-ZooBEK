@@ -14,7 +14,7 @@ require __DIR__ . "/header.php";
             <a class="btn btn-secondary fs-2" href="/indexTicket.php">Билеты</a>
             <a class="btn btn-secondary fs-2" href="/indexAdmin.php">Пользователи</a>
         </div>
-
+        <a href="/createT.php"> создать животное</a>
         <div class="container-fluid mt-5">
             <?php
             // Include config file

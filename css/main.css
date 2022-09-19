@@ -248,7 +248,7 @@ footer li span:hover {
     transition: 1s ease-in-out;
 }
 
-.zoo-card p {
+.zoo-card card__count{
     opacity: 0;
     font-size: 30px;
     transition: 1s ease-in-out;
@@ -259,7 +259,10 @@ footer li span:hover {
     color: black;
 }
 
-.zoo-card:hover p {
+.zoo-card:hover card__count{
     opacity: 1;
     color: black;
+}
+.card-disabled{
+    border: 2px dotted red;
 }
